@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "SkiaBreathing",
-    "slug": "SkiaBreathing",
+    "name": "SkiaAnimations",
+    "slug": "SkiaAnimations",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "skiabreathing",
+    "scheme": "skiaanimations",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
