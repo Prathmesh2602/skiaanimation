@@ -1,56 +1,96 @@
-# Welcome to your Expo app 👋
+# SkiaAnimations
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A collection of GPU-accelerated animations built with **React Native Skia** and **Reanimated 4**, running natively on iOS and Android via Expo.
 
-## Get started
+---
 
-1. Install dependencies
+## Animations
 
-   ```bash
-   npm install
-   ```
+| Animation              | Description                                                                |
+| ---------------------- | -------------------------------------------------------------------------- |
+| **Breathing Orb**      | Pulsing radial gradient with blur mask, driven by Reanimated shared values |
+| **Wave**               | Interactive sine wave with dual-path morphing and linear gradient fill     |
+| **Chasing Bubbles**    | Physics-style circles orbiting a center point                              |
+| **Metaball**           | Organic blob merging effect using ColorMatrix blur                         |
+| **Focus**              | Touch-to-reveal blurred text letters on a per-character basis              |
+| **Blur Cards**         | BackdropBlur cards with layered glass effect                               |
+| **Masking Onboarding** | Circle mask reveal transition for onboarding screens                       |
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## Tech Stack
 
-In the output, you'll find options to open the app in a
+| Package                      | Version |
+| ---------------------------- | ------- |
+| Expo                         | 55      |
+| React Native                 | 0.83.6  |
+| React                        | 19.2.0  |
+| @shopify/react-native-skia   | 2.4.18  |
+| react-native-reanimated      | 4.2.1   |
+| react-native-gesture-handler | 2.30.0  |
+| TypeScript                   | 5.9     |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Getting Started
 
-## Get a fresh project
+### Prerequisites
 
-When you're ready, run:
+- Node.js 18+
+- Expo CLI
+- iOS Simulator / Android Emulator or physical device
+
+### Install
 
 ```bash
-npm run reset-project
+git clone https://github.com/Prathmesh2602/skiaanimation.git
+cd SkiaAnimations
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Run
 
-### Other setup steps
+```bash
+# iOS
+npx expo run:ios
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+# Android
+npx expo run:android
+```
 
-## Learn more
+> Skia requires a native build — `npx expo start` with Expo Go will not work.
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Project Structure
 
-## Join the community
+```
+src/
+├── app/
+│   ├── _layout.tsx        # Root layout (Stack, no header)
+│   ├── App.tsx            # Entry — swap animations here
+│   └── index.tsx
+└── Animations/
+    ├── Breathing.tsx
+    ├── WaveAnimation.tsx
+    ├── ChasingBubbles.tsx
+    ├── Metaball.tsx
+    ├── Focus.tsx
+    ├── BlurCards.tsx
+    └── MaskingOnboardingScreen.tsx
+assets/
+└── fonts/
+    └── Roboto-Bold.ttf
+```
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Switching Animations
+
+In [src/app/App.tsx](src/app/App.tsx), uncomment the animation you want to render:
+
+---
+
+## License
+
+MIT
