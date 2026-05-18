@@ -18,6 +18,23 @@ A collection of GPU-accelerated animations built with **React Native Skia** and 
 
 ---
 
+## Previews
+
+<table>
+  <tr>
+    <td align="center"><b>Breathing Orb</b><br/><img src="assets/demos/breathing.gif" width="180"/></td>
+    <td align="center"><b>Wave</b><br/><img src="assets/demos/wave.gif" width="180"/></td>
+    <td align="center"><b>Chasing Bubbles</b><br/><img src="assets/demos/chasing-bubbles.gif" width="180"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Metaball</b><br/><img src="assets/demos/metaball.gif" width="180"/></td>
+    <td align="center"><b>Focus</b><br/><img src="assets/demos/focus.gif" width="180"/></td>
+    <td align="center"><b>Masking Onboarding</b><br/><img src="assets/demos/masking-onboarding.gif" width="180"/></td>
+  </tr>
+</table>
+
+---
+
 ## Tech Stack
 
 | Package                      | Version |
@@ -79,6 +96,13 @@ src/
     ├── BlurCards.tsx
     └── MaskingOnboardingScreen.tsx
 assets/
+├── demos/
+│   ├── breathing.gif
+│   ├── wave.gif
+│   ├── chasing-bubbles.gif
+│   ├── metaball.gif
+│   ├── focus.gif
+│   └── masking-onboarding.gif
 └── fonts/
     └── Roboto-Bold.ttf
 ```
